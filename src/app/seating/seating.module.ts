@@ -1,22 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpModule } from '@angular/http';
+
 import { SeatingComponent } from './seating.component';
 import { SeatingChartService } from './seating-chart.service';
+import { SeatingDataService } from './seating-data.service';
 
 @NgModule({
   imports: [
     CommonModule,
-    SeatingComponent
+    HttpModule
   ],
   declarations: [
     SeatingComponent
   ],
   providers: [
-    SeatingChartService
+    SeatingChartService,
+    SeatingDataService
   ],
   exports: [
-    SeatingComponent,
-    SeatingChartService
+    SeatingComponent
   ]
 })
 export class SeatingModule { }
