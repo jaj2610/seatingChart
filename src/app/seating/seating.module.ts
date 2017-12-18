@@ -3,8 +3,11 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 import { SeatingComponent } from './seating.component';
+import { SeatComponent } from './seat/seat.component';
+
 import { SeatingChartService } from './seating-chart.service';
 import { SeatingDataService } from './seating-data.service';
+import { SelectedService } from './shared/selected.service';
 
 @NgModule({
   imports: [
@@ -12,11 +15,13 @@ import { SeatingDataService } from './seating-data.service';
     HttpClientModule
   ],
   declarations: [
-    SeatingComponent
+    SeatingComponent,
+    SeatComponent
   ],
   providers: [
     SeatingChartService,
-    SeatingDataService
+    SeatingDataService,
+    SelectedService
   ],
   exports: [
     SeatingComponent

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SeatingChartService } from './seating-chart.service';
+import { SelectedService } from './shared/selected.service';
 
 @Component({
   selector: 'app-seating',
@@ -10,7 +11,7 @@ export class SeatingComponent implements OnInit {
 
   public seating = [[]];
 
-  constructor(private seatingService: SeatingChartService) { }
+  constructor(private seatingService: SeatingChartService, public selectedService: SelectedService) { }
 
   ngOnInit() {
     this.seatingService.initChart();
