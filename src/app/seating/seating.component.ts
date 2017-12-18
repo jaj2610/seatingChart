@@ -18,4 +18,20 @@ export class SeatingComponent implements OnInit {
     this.seating = this.seatingService.seatingChart;
   }
 
+  getClass(index) {
+    if (this.seating[index + 1]) {
+      return this.seating[index + 1][0]['class'] !== this.seating[index][0]['class'];
+    } else {
+      return false;
+    }
+  }
+
+  getColumn(row, index) {
+    if (row[index + 1]) {
+      return row[index + 1]['seat'].charCodeAt(0) - 1 !== row[index]['seat'].charCodeAt(0);
+    } else {
+      return false;
+    }
+  }
+
 }

@@ -19,8 +19,8 @@ export class SeatingChartService {
   private sortRows() {
     // create array of rows containing all seats in each row
     this.seatingData.forEach(element => {
-      this.seatingChart[element.row] = this.seatingChart[element.row] || [];
-      this.seatingChart[element.row].push(element);
+      this.seatingChart[element.row - 1] = this.seatingChart[element.row - 1] || [];
+      this.seatingChart[element.row - 1].push(element);
     });
 
     this.sortColumns();
