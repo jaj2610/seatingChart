@@ -1,7 +1,7 @@
 <div *ngFor="let row of seating; let i = index">
   <span *ngFor="let seat of row; let j = index">
     <app-seat [seat]="seat" [selected]="seat === selectedService.selectedSeat" (click)="selectedService.selectSeat(seat)"></app-seat>
-    <span *ngIf="getColumn(row, j)">A</span> <!-- Aisle placeholder -->
+    <span class="aisleColumn" *ngIf="getColumn(row, j)"></span> <!-- Aisle placeholder -->
   </span>
-  <div *ngIf="getClass(i)">Aisle</div> <!-- Aisle placeholder -->
+  <div class="aisleRow" *ngIf="getClass(i)"></div> <!-- Aisle placeholder -->
 </div>
