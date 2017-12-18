@@ -1,3 +1,5 @@
-<p>
-  seating component
-</p>
+<div *ngFor="let row of seating">
+  <span *ngFor="let seat of row">
+    {{seat.seat}}
+  </span>
+</div>

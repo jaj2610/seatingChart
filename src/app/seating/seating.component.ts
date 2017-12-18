@@ -8,9 +8,13 @@ import { SeatingChartService } from './seating-chart.service';
 })
 export class SeatingComponent implements OnInit {
 
-  constructor(seatingService: SeatingChartService) { }
+  public seating = [[]];
+
+  constructor(private seatingService: SeatingChartService) { }
 
   ngOnInit() {
+    this.seatingService.initChart();
+    this.seating = this.seatingService.seatingChart;
   }
 
 }
