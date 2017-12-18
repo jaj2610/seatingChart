@@ -7,10 +7,10 @@ import { Seat } from './seat.interface';
   styleUrls: ['./seat.component.css']
 })
 export class SeatComponent implements OnInit {
-  @Input() seat: Seat;
 
   private _selected = false;
 
+  @Input() seat: Seat;
   @Input() public set selected(val) {
     this.styles['selected'] = val;
     this._selected = val;
@@ -35,6 +35,7 @@ export class SeatComponent implements OnInit {
       'selected': this._selected
     };
 
+    // basic tooltip based on seat values
     this.tooltip = 'Seat ' + this.seat.row + this.seat.seat + ': ' + this.seat.class + ' class';
     if (this.seat.premium) {
       this.tooltip += ' (premium)';

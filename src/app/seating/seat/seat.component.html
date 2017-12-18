@@ -1,1 +1,1 @@
-<button [ngClass]="styles" [title]="tooltip">{{seat.seat}}</button>
+<button [disabled]="seat.occupied" class="seat" [ngClass]="styles" [title]="tooltip">{{seat.row}}{{seat.seat}}</button>

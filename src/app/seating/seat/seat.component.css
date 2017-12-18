@@ -1,17 +1,22 @@
-.selected {
-  color: green;
+.seat {
+  width: 40px;
+	height: 40px;
+  border-radius: 4px;
+	background: #D8D8D8 ;
+  padding: 10px;
+  position: relative;
 }
 
-.unselected {
-  color: black;
+.selected {
+  background-color: #bada55;
 }
 
 .occupied {
-  color: red;
+  background-color: red;
 }
 
 .premium {
-  background-color: #ff9999;
+  color: #ff9999;
 }
 
 .overWing {
