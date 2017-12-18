@@ -13,7 +13,7 @@ export class SeatingChartService {
   }
 
   public initChart() {
-    this.seatingDataService.getSeatingData().subscribe(data => {this.seatingData = data; this.sortRows()}, error => console.log(error));
+    this.seatingDataService.getSeatingData().subscribe(data => { this.seatingData = data; this.sortRows(); }, error => console.log(error));
   }
 
   private sortRows() {
@@ -32,6 +32,6 @@ export class SeatingChartService {
       row.sort(function(a, b) {
         return a.seat > b.seat ? 1 : -1;
       });
-    })
+    });
   }
 }

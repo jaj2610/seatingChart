@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs/Rx';
-import 'rxjs/add/operator/map';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class SeatingDataService {
 
-  private path: string = 'assets/seats.json'; // TODO allow configuration
-  // public seatingData;
+  private path = 'assets/seats.json'; // TODO allow configuration
 
-  constructor(private http: Http) {
+  constructor(private http: HttpClient) {
   }
 
   public getSeatingData(path?: string): Observable<any> {
@@ -19,8 +17,7 @@ export class SeatingDataService {
     }
 
     return this.http.get(path)
-      .map((response) => response.json())
-      .catch((error: any) => Observable.throw(error.json().error || 'Error'));;
+      .catch((error: any) => Observable.throw(error.json().error || 'Error'));
   }
 
 }

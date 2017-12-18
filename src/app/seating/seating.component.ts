@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SeatingChartService } from './seating-chart.service';
 
 @Component({
-  selector: 'j-seating',
+  selector: 'app-seating',
   templateUrl: './seating.component.html',
   styleUrls: ['./seating.component.css']
 })
