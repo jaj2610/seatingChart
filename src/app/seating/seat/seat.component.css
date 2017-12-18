@@ -5,3 +5,15 @@
 .unselected {
   color: black;
 }
+
+.occupied {
+  color: red;
+}
+
+.premium {
+  background-color: #ff9999;
+}
+
+.overWing {
+  border-color: #99ccff;
+}

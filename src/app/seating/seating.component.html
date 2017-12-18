@@ -1,5 +1,5 @@
 <div *ngFor="let row of seating">
   <span *ngFor="let seat of row">
-    <app-seat [seat]="seat" [selected]="seat === selectedService.selectedSeat" (click)="selectedService.selectedSeat = seat"></app-seat>
+    <app-seat [seat]="seat" [selected]="seat === selectedService.selectedSeat" (click)="selectedService.selectSeat(seat)"></app-seat>
   </span>
 </div>
